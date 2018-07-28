@@ -14,11 +14,11 @@
 
 class ConcreteClass : public AbstractClass {
 private:
-	virtual void PrimitiveOperation1() override
+	void PrimitiveOperation1() override
 	{
 	}
 
-	virtual void PrimitiveOperation2() override
+	void PrimitiveOperation2() override
 	{
 	}
 };

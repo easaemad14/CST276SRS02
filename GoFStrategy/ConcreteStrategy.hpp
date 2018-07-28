@@ -13,7 +13,7 @@
 
 class ConcreteStrategy : public Strategy {
 private:
-	virtual void AlgorithmInterface() override
+	void AlgorithmInterface() override
 	{
 	}
 };

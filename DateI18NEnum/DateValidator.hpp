@@ -12,7 +12,7 @@
 
 class DateValidatorI18N {
 public:
-	enum class Format { YMD, DMY, MDY };
+	enum class Format { YMD, DMY, MDY, YDM };
 	bool operator()(const std::string date, const Format form);
 	int getDaysInMonthBaseOne(int month);
 

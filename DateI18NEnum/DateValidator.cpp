@@ -89,6 +89,11 @@ bool DateValidatorI18N::operator()(const string date, const Format form)
 		mMonth = getDateValFromString(tmp);
 		mDay = getDateValFromString(tmp);
 		break;
+	case Format::YDM: // Added an extra case for Gregorian YDM
+		mYear = getDateValFromString(tmp);
+		mDay = getDateValFromString(tmp);
+		mMonth = getDateValFromString(tmp);
+		break;
 	default: // WTF, this isn't possible!
 		return false;
 	}
