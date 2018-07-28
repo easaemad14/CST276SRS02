@@ -74,3 +74,25 @@ class DateValidatorMDY : public DateValidatorI18N {
 		return std::string("DateValidatorMDY");
 	}
 };
+
+// Created new class for Latvia, Nepal, and Turkmenistan
+class DateValidatorYDM : public DateValidatorI18N {
+	bool is_good(const std::string date) override
+	{
+		if (date.empty()) {
+			return false;
+		}
+
+		std::string tmp(date);
+		setYear(getDateValFromString(tmp));
+		setDay(getDateValFromString(tmp));
+		setMonth(getDateValFromString(tmp));
+
+		return isValidYear() && isValidMonth() && isValidDay();
+	}
+
+	std::string getStratName() override
+	{
+		return std::string("DateValidatorYDM");
+	}
+};
